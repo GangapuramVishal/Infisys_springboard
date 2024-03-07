@@ -1,0 +1,201 @@
+>> Bootstrap helps in making responsive web pages by implementing responsive web design concept.
+
+So, let us understand what is responsive web design?
+
+Responsive web design is all about providing an optimal viewing experience across a wide variety of devices. This means that the entire content of the site should appear without loss of any information along with the maintenance of its appeal, when it is viewed in a mobile or a tablet or a desktop.
+
+The basic features of responsive web design are as follows:
+
+Fluid Layout: Layout grows and shrinks based on the size of the device browser
+
+Flexible Images: Images adapt to the size of the device browser
+
+Responsiveness: Selectively apply CSS based on the size of browser/device using responsive patterns
+
+>> But before that, how do we get started?
+
+Click here to download the bootstrap.css file required.
+
+(bootstrap.css should be placed inside 'css' folder under 'Web Content' of a 'Dynamic Web Project' )
+
+Include it in our HTML page just the way we include external stylesheets i.e.
+
+<link href="bootstrap.css" rel="stylesheet">
+ 
+
+Now you are ready to use various Bootstrap classes.
+
+ 
+
+​​​​​​Note:
+
+You can also include Bootstrap 4 from a CDN (Content Delivery Network) by using the below-given link in your HTML page:
+<!--compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+MaxCDN provides CDN support for Bootstrap's CSS and JavaScript. For that, you must also include jQuery also.
+      You can include it in your HTML file by using the below-given links:
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<!--JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+ 
+>> The first set of classes needed are the Container classes.
+
+In order to properly place the content in a webpage, Bootstrap needs a containing element to wrap the page contents. This basically means that all content of a page should be inside a container class for the proper rendering of a webpage.
+
+Bootstrap provides two types of container classes:
+
+.container              : fixed width responsive container
+
+.container-fluid     : full width responsive container, utilizing the entire width of the browser/viewport (webpage’s visible area)                 
+
+Syntax:
+
+<div class="container/container-fluid">
+ Enter text here
+</div>
+
+ 
+
+Let us now understand the difference between the two.
+
+>> The difference between .container and .container-fluid comes from these lines of CSS in bootstrap.css file:
+
+ 
+
+@media (min-width: 768px) { .container { width: 720px } }
+@media (min-width: 992px) { .container { width: 960px } }
+@media (min-width: 1200px) { .container { width: 1140px } }
+
+ 
+
+ 
+
+According to the width of the viewport, the .container class gives the particular div a fixed width.
+
+From 1200px (i.e. the viewport width) onwards, the width of the container will remain constant as 1140px
+
+From 992px to 1199px , the width of the container will remain constant as 960px
+
+From 768px to 991px , the width of the container will remain constant as 720px
+
+ 
+
+On the other hand, .container-fluid class does not have above lines of code, so it will constantly resize as you change the width of viewport.
+
+ >> To create a row in Bootstrap, .row class needs to be used.
+
+The syntax is as follows:
+
+<div class="container/container-fluid">
+	<div class="row">Enter text here</div>
+</div>
+
+Let us now understand this with an example:
+
+<div class="container" style="border: 2px solid #cccccc">
+  I am a div with class .container
+  <div class="row" style="border: 2px solid #cccccc">I am a row inside .container</div>
+</div>
+<div class="container-fluid" style="border: 2px solid #cccccc">
+  I am a div with class .container-fluid
+  <div class="row" style="border: 2px solid #cccccc">I am a row inside .container-fluid</div>
+</div>
+
+ 
+If you give borders to .container, .container-fluid and .row, you will observe that the row occupies the entire width of the container i.e. whatever the width of the container is, that will be the width of the row.
+
+You can create multiple rows within the same container in a page.
+
+>>
+If you look inside the bootstrap.css file, you will see that the class .row has been defined as follows:
+
+.row                       
+{
+  margin-right: -15px;
+  margin-left: -15px;
+}
+Because of the -15px margin on the left and right side, 15px of content on these sides will not be visible on the screen.
+
+
+Now, the classes .container and .container-fluid have the following lines:
+
+.container/.container-fluid 
+{
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+When a row is used inside a container, container’s padding adjusts the row’s margin, so the entire content of the row is visible.
+
+>>
+To create a column in Bootstrap, .col-<sq>-<n> class needs to be used.
+
+Here <sq> is the size qualifier and <n> is the number of grids we want the column to occupy.
+
+ 
+
+Size qualifiers can be of four types:
+
+lg  (for large devices with screen width >= 1200px)
+
+md (for medium devices with screen width < 1200px and >=992px)
+
+sm (for small devices with screen width < 992px and >=768px)
+
+xs (for extra small devices with screen width < 768px)
+
+Number of grids in a column can range between 0 to 12. 
+
+
+Syntax:
+
+<div class="container-fluid">
+		<div class="row">
+			<div class="col-<sq>-<n>">Enter text here</div>
+		</div>
+</div>
+ 
+
+Let us now understand this with an example.
+
+>>
+Since our website can be viewed in a mobile, or a tab, or a desktop, we need to design a layout that will enable optimal viewing in multiple screen sizes.
+
+.col-<sq1>-<n>  .col-<sq2>-<m> class definition enables us to design pages for screens of multiple dimensions. Here it defines n and m grid(s) column for size sq1 and sq2 respectively.
+ 
+
+Syntax:
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-<sq1>-<n> col-<sq2>-<m>"> … </div>
+  </div>
+</div>
+ 
+Let us understand this with an example, where we have 2 images to be displayed on the screen. The configuration requirement is as follows:
+
+On desktops, both images have to appear one beside the other
+
+On a tablet screen, each image has to appear one below the other, in the center of the screen
+
+On a mobile screen, the images should be displayed one below the other occupying the entire width of the screen
+>>
+<div class="row">
+  <div class="col-md-4 offset-md-1 col-sm-5 offset-sm-3 col-xs-12 offset-xs-0">
+     <img src="img/img1.png" />
+  </div>
+ 
+ <div class="col-md-4 offset-md-1 col-sm-5 offset-sm-3 col-xs-12 offset-xs-0">
+     <img src="img/img2.png" />
+  </div>
+</div>
+
+For medium screens, the images will occupy 4 grids and there will be 1 grid of offset to the left of them
+
+For small screens, the images will occupy 5 grids and there will be 3 grids of offset to the left of them
+
+For extra small screens, the images will occupy 12 grids and there will be no offset
+

@@ -1,0 +1,689 @@
+HTML5
+
+Introduction to web
+> Web terminologies
+  > 1. URL - Uniform Resource Locator
+       protocol://domain(host:port)/path
+       protocal is used for client-server communication
+       domain - Name of the connected server along with the port number
+       Path- To access the Resources
+    E.g: http://www.myapp.com/results
+
+  > 2. HTTP - Hypertext Transfor Protocal
+       A set of rules for transferring files(text,graphics, images, videos            etc...) on World Wide Web 
+       clint and server communicate with each other with Apllication level   protocal called HTTP
+
+  > 3. Multipurpose INternet Mail Extension
+        Text 
+	Image
+	Video
+	Application (.json, .sql, .js)
+
+
+In the web technology world, below are the fundamental building blocks of any web page.
+
+> HTML (HyperText Markup Language) is the most fundamental building block of the Web. It defines the meaning and structure of web content.
+
+> CSS(Cascading Style Sheet) is used for styling and giving better presentation to the web pages
+
+> JavaScript(JS) is used for implementing behavior required in a web page
+       
+================================================================================================================================================
+
+Hyper Text Markup Language (HTML) is a standard markup language to create the structure of a web page. It annotates the content on a web page using HTML elements.
+
+In a web page, all instructions to the browser are given in the form of HTML tags, also known as HTML elements. 
+
+The content of the web page will be rendered as per the HTML tags in which they are enclosed.
+
+HTML document structure tells the browser how to render the text written in each of the HTML elements of the web page.
+
+The structure of an HTML document is defined using HTML tags. 
+Below is the basic structure of a simple HTML document or web page:
+
+<!DOCTYPE html>
+<html>
+   <head>
+    <title></title>
+   </head>
+   <body>
+
+   </body>
+</html>
+
+The following are some key elements in HTML that form the basic structure of a web page.
+
+<!DOCTYPE html> declaration update the browser about the version of HTML being used. By default, it points to HTML5, the latest version.
+
+The <html> tag encapsulates the complete web page content. All other tags are 'nested' within the <HTML> tag.
+
+Any HTML document or web page consists of two main sections the 'head' and the 'body'. 
+
+The head section starts with the start tag <head> and ends with the end tag </head>.
+
+The following elements can be provided within the head tag.
+<title>
+
+Defines the title that should be displayed on the browser tab
+
+<meta>
+
+Metadata is in-general, data about data.
+
+Provides metadata about the HTML document.
+
+Metadata will not be displayed on the page but will be machine-readable.
+
+Used to specify page description, author of the document, last modified, etc.
+
+Used by browsers (control how to display content or reload the page), search engines (keywords), or other web services.
+
+Post HTML5, meta tag also allows web designers to take control over the viewport by setting the meta viewport tag.
+
+<style>
+
+Defines style information for the web page
+
+<link>
+
+Defines a link to other documents like CSS
+
+<script>
+
+Defines script like JavaScript
+
+The body section is denoted within the start tag <body> and ends with the end tag </body>. This section contains actual web page content like text, images, etc.
+
+Every HTML document/web page will have only one set of 
+
+<html>...</html> tag
+
+<head>...</head> tag 
+
+<body>...</body> tag
+
+HTML document/web page is saved with .htm or .html extension.
+
+
+Below are some of the semantic tags in HTML:
+
+<header>
+
+The <header> element is used to include header content like web page logo, login link, website settings link, etc. Ideally, every web page has one header. However, multiple headers may also be included as per need.
+
+<footer>
+
+The <footer> element is used to include footer content like copyright, about us, terms and conditions link, etc. One footer is included per page.
+
+<main>
+
+The <main> element is used for demarking the main content of the web page. Only one main tag per web page is allowed.
+
+<nav>
+
+The <nav> element is used for navigational content like navigation menu for the website. There is no limit to the number of times <nav> tag can be used on a web page. As long as there are navigation links, links can be wrapped inside <nav>.
+
+<section>
+
+The <section> element is used to organize the web page into different sections.
+
+<article>:
+
+The <article> element is used to include self-contained composition on a web page.
+
+<aside>:
+
+The <aside> element is used to include content related to the main content of the web page.
+
+<address>:
+
+The <address> element helps to semantically organize address details in HTML content.
+
+>> HTML lists come in 3 basic flavors: 
+
+Unordered list
+
+Ordered list
+
+Description list
+
+Each one has a specific purpose and meaning. 
+
+>Let us start with the unordered list.
+
+An unordered list is used to create a list of related items, in no specific order, like in the Terms and Conditions page where there is more focus on ensuring the readability of content by listing out points but not much concern about the specific order of points.
+
+An unordered list starts with the <ul> tag.
+
+Each item within the list technically referred to as 'list-item' enclosed within the <li> tag.
+
+For example, to generate an unordered list as seen below :
+
+<h1>Courses offered:</h1>
+    <ul>
+        <li>HTML5</li>
+        <li>CSS</li>
+        <li>JS</li>
+        <li>Bootstrap</li>
+    </ul>
+
+The types of bullet points can be customized in an unordered list by using the list-style-type property provided by CSS.
+We have three types such as disc, circle, square.
+
+For example, if we want our list to be displayed as below:
+
+<h1>Courses offered:</h1>
+    <ul style="list-style-type: square;">
+        <li>HTML5</li>
+        <li>CSS</li>
+        <li>JS</li>
+        <li>Bootstrap</li>
+    </ul>
+
+>> An ordered list is used when the order of items is important and we want to create a list of related items, in a specific order.
+
+An ordered list starts with the <ol> tag.
+
+Each item within the list technically referred to as 'list-item' enclosed within the <li> tag.
+
+For example, to generate an unordered list as seen below :
+<h1>Courses offered:</h1>
+    <ol>
+        <li>HTML5</li>
+        <li>CSS</li>
+        <li>JS</li>
+        <li>Bootstrap</li>
+    </ol>
+
+The types of bullet points can be customized in an ordered list by using the list-style-type property provided by CSS.
+
+For example, if we want our list to be displayed as below:
+
+<h1>Courses offered:</h1>
+    <ol style="list-style-type: upper-roman;">
+        <li>HTML5</li>
+        <li>CSS</li>
+        <li>JS</li>
+        <li>Bootstrap</li>
+    </ol>
+
+Some of the possible values of the list-style-type property	Type of bullet
+1,2,3,4 ...	decimal
+I, II,III,IV,..	upper-roman
+
+I,ii,iii,iv,..	lower-roman
+
+A,B,C,D,..	upper-latin
+
+a,b,c,d,..	lower-latin
+
+>>Description lists are used to contain name-value groups, where names can be a list of terms and values can be their related descriptions.
+
+The description list otherwise called definition list arranges items in the same way as the meaning associated with each word is arranged in a dictionary as below:
+
+Description lists are created with the <dl> tag.
+
+The term is placed within <dt>.. </dt> tag and description is placed between <dd>...</dd> tag.
+
+Let us see the syntax now:
+<dl>
+<dt> Description Term 1 </dt>
+<dd> Description Definiton 1 </dd>
+<dt> Description Term 2 </dt>
+<dd> Description Definition 2 </dd>
+</dl>
+================================================================================================================================================
+
+>>A hyperlink is a prime way in which users can navigate from one web page to another. A hyperlink can point to another web page, or website, or files, or even specific locations on the same web page.
+
+Hyperlinks can be of any of the below types:
+
+Text hyperlink:
+
+A clickable text is used to take the user to another web page. Largely, we use text-based hyperlinks.
+
+This text usually appears with an underline and in a different color.
+
+This color mapping is automatically done by the browser for all text hyperlinks.
+
+Image hyperlink:
+
+A clickable image is used to take the user to another web page.
+
+Bookmark hyperlink:
+
+A clickable text/image is used to take the user to another part of the same web page.
+
+Email hyperlink:
+
+It allows users to send an email by clicking on that link.
+
+Contact number hyperlink:
+
+It allows the user to call a number by clicking on that link.
+Let us discuss various hyperlinks that can be created in an HTML page.
+
+Bookmark hyperlink:
+
+When a web page is lengthy, we commonly come across icons or links that say "Go to Top" or "Go to Bottom". Click on these links does take the user to the top of the page or bottom, as applicable. Sometimes we also observe, on click of a text in the menu bar, the page auto scrolls to that particular section on that page. This is achieved by using the Bookmarking concept and the same is implemented by using hyperlinks.
+
+<h2 id="top">Topic</h2>
+<p>Detail……</p>
+<p>Detail……</p>
+<p>Detail……</p>
+<a href="#top">Go to Top</a>
+
+Email hyperlink:
+
+To send an email on click of a hyperlink, use the below syntax:
+<a href="mailto:someone@xyz.com?Subject=Hello%20again">Send Mail</a>
+
+Contact number hyperlink:
+
+To make a call to a number on click of a hyperlink, use the below syntax:
+<a href="tel:+9999">Call Us</a>
+
+Link element has an attribute named 'target' which specifies in which window, the hyperlinked content should appear.
+
+The target attribute can hold the following values: 
+
+The possible value of "target"
+
+Description
+
+_blank     Opens a web page in a new window or tab
+
+_self      Opens a web page in the same window (default)
+
+_parent    Opens a web page in the parent frame
+
+_top       Opens a web page in the full body of the window
+
+frame-name Opens a web page in a named frame
+
+For example: <a href="https://owasp.org/" target="_blank">Link to OWASP web site</a>
+
+>>The table below lists widely used text-level semantic elements supported in HTML5.
+
+Element	Description
+abbr	Defines abbreviation or acronym
+q	Represents text quoted from another source by adding quotation mark (" ")
+small	Displays text in relatively smaller font-size
+mark	Highlights text
+strong	Displays text in bold
+em	Displays text in the italic or emphasized format
+sub	Displays text as subscript
+sup	Displays text as superscript
+span	Provides styling to text
+br	Breaks line of text
+
+Below are some text semantic tags and their usage:
+
+The <strong> element:
+
+Make the text appear bolder
+<strong>Text in bold</strong>
+
+The <mark> element:
+
+Highlighted text like the way we do in a paper using a highlighter
+HTML <mark>Marked</mark> Formatting
+
+The <sup> element:
+
+Display text like superscript
+Example of <sup>superscripted</sup> text.
+
+The <sub> element:
+
+Display text like subscript
+Example of <sub>subscripted</sub> text.
+
+The <em> element:
+
+Emphasize text
+<em>Text emphasized</em>
+
+The <small> element:
+
+Display text in relatively smaller font
+<h2>Text <small>Small</small> in HTML</h2>
+
+The <del> element:
+
+Strikethrough text
+This is <del>deleted</del> content.
+
+Best Practices:
+
+Do not use the <em> element to display any warning /caution content in any web page creation.
+
+Avoid using <em> just to apply italic styling instead it is recommended to use CSS font-style property for italic styling.
+
+Avoid <s>,<i>,<b> and <u> elements while coding any web page.
+
+It is a best practice to include Title Attribute for <abbr> element.
+
+Avoid the <span> element as much as possible.
+
+<!DOCTYPE html>
+<html>
+    <body>
+        <p><abbr title="HyperText Markup Language">HTML</abbr> stands for HyperText Markup Language</p>
+        <p>This <small>small</small> text</p>
+        <p>This <mark>mark</mark> text</p>
+        <p>This <strong>strong</strong> text</p>
+        <p>This <em>emphasis</em> text</p>
+        <p>H <sub>2</sub> O</p>
+        <p>x <sup>2</sup> y</p>
+        <p> </p>
+    </body>
+</html>
+
+
+The table below lists widely used character entities supported in HTML5.
+
+Character    Description		Entity Name	Entity Number
+
+            Non-breaking space		&nbsp;		&#160;
+
+
+<		Less than		&lt;		&#60;
+
+
+
+>		Greater than		&gt;		&#62;
+
+
+ 
+& 		Ampersand		&amp;		&#38;
+
+
+
+©		Copyright		&copy;		&#169;
+
+
+€		Euro			&euro;		&#8364;
+
+
+£		Pound			&pound;		&#163;
+
+
+®		Registered trademark	&reg; 		&#174;
+
+
+Syntax: &entity_name; or  &#entity_number;
+
+>> Attributes that can be used with all HTML elements are called "Global attributes".
+
+The table below lists a few global attributes supported in HTML5.
+
+Attribute	Description
+contenteditable:	Allows the user to edit content. Possible values are true/false.
+dir:	Specifies text direction. Possible values are Itr/ rtl.
+title: isplays the string message as a tooltip.
+spellcheck: pecifies whether the spelling of an element's value should be checked or not. Possible values are true/false.
+id: ives a unique id to an element.
+
+<div>
+    <p contenteditable="true">This is editable</p>
+    <p dir="rtl">The direction of the text is from right to left</p>
+    <p title="mydemo">Hover your mouse here to see the title</p>
+    <p id="id1">ID should be unoque for each element</p>
+</div>
+
+In the above example you can observe that:
+
+Line number 2 allows the user to edit the text which has been enclosed with the <p> element.
+
+Line number 3 modifies the text direction of the <p> element from right to left orientation.
+
+While hovering the mouse on line number 4, the title message will be displayed.
+
+The id attribute has been used to set a unique id for <p> element in line number 5.
+
+>> The table element is defined in HTML using <table>...</table> tag
+
+It contains table header and table body.
+
+The table header is for adding header information like column headers and the table body is for table contents.
+
+
+The following elements are used within the table element:
+
+Element	Description
+caption	Defines table heading
+tr	Defines row of the table
+th	Defines heading of the column
+td	Defines data of column
+thead	Defines header part of the table
+tbody	Defines the content part of the table
+colgroup	Helps to logically group two or more consecutive columns
+
+<table>
+    <caption>Table heading</caption>
+    <thead>
+        <tr> 
+            <th>Column 1 heading</th>
+            <th>Column 2 Heading</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Column 1 data</td>
+            <td>Column 2 data</td>
+        </tr>
+    </tbody>
+</table>
+
+>>We have <select> and <datalist> elements in HTML which helps to collect input data from user as a drop-downs.
+
+Let us see them in detail:
+
+<select> element : 
+
+Defines a drop-down list. 
+
+The "multiple" attribute can be used for having a multi-select dropdown menu.
+Country code: <select >
+    <option value="">-- Please choose a country code --</option>
+    <option value="+213">+213</option>
+    <option value="+91">+91</option>
+    <option value="+244">+244</option>
+    <option value="+61">+61</option>
+    <option value="+973">+973</option>
+</select>
+
+<datalist> element: 
+
+Defines a set of pre-defined options available to choose for an <input> element.
+
+In the below example list attribute holds lists of possible options, the value assigned to the list attribute of the input element and id attribute of datalist attribute should be the same and the value sent to the server should be assigned to the option element value attribute.
+
+Country: <input list="countries">
+<datalist id="countries">
+    <option value="India">
+        <option value="France">
+            <option value="Singapore">
+                <option value="Thailand">
+                    <option value="United Arab Emirates">
+                        <option value="United States of America">
+</datalist>
+
+Note: <select> allows the user to select from some pre-defined options.
+
+Whereas, for the <datalist> element, even though it is suggested to select from the given options, the user can actually enter the data to the input field as any other input field.
+
+Also, Output may vary for some input elements according to the browser
+
+Let us see some other input elements in HTML where the data can be collected from the user as a slider.
+
+ Input type – range: 
+
+Defines a range slider, where the user can select input. 
+Volume: <input type="range"/>
+
+Meter: 
+
+Can be used to represent a scalar measurement within a known range.
+Disk usage: <meter min="0" max="100" value="50"></meter>
+
+Progress: 
+
+Can be used to represent the progress of a task. 
+Task completed: <progress min="0" max="100" value="50">50 of 100</progress>
+
+to get a output value in numbers
+
+<!DOCTYPE html>
+<html>
+    <body>
+        <form oninput="O1.value = parseInt(R1.value)">
+            Rate your experience:<input type="range" id="R1" min="0" max="100" step="10" />
+            <output for="R1" id="O1"></output>
+            
+        </form>
+    </body>
+</html>
+
+>> The following are some of the attributes which can be used with HTML input elements.
+
+Placeholder
+
+Pattern
+
+Min
+
+Max
+
+Step
+
+Required
+
+Multiple
+
+Form-override
+
+Let us see each of them in detail.
+Placeholder:
+
+The placeholder attribute specifies a value that appears in the textbox as below:
+First name: <input type="text" placeholder="Enter your first name"/>  
+
+Pattern:
+
+The pattern attribute creates a custom pattern validator.
+
+The value entered by the user is checked for validity against a specified pattern.
+
+If the user input value does not match with a specified pattern, an error message appears.
+Username: <input type="text" pattern="[A-Za-z]"/>
+
+Min, Max, and Step:
+
+The following are some of the attributes which are used only with range and number input types
+
+min: Specifies a minimum acceptable value.
+
+max: Specifies maximum acceptable value.
+
+step: Specifies a difference of consecutive values when the user uses the range/number input element.
+Job experience: <input type="number" min="2" max="10" step="1"/> 
+
+Multiple:
+ 
+The multiple attribute value allows the user to enter/select/upload more than one value.
+
+<input type="file" multiple/>
+
+>> EMbedded Elements
+
+Image element: 
+Embedding images to a web page can be done with the <img>...</img> tag. The <img> tag has attributes 'src' and 'alt' where src defines the location of the image and alt defines the alternative text if it is failed to load the image inside the web page.
+
+<img src="Summit.png" alt="image unavailable"/>
+We can also provide a caption for the embedded images.
+
+HTML provides a semantic element <figure> along with <figcaption> element which help us to provide caption for our images.
+
+For example, consider the following code.
+
+<figure>
+    <img src="tropicalSea.jpg"
+         alt="An image of tropical sea"
+         width="400"
+         height="341">
+  
+    <figcaption>A colorful tropical sea view</figcaption>
+</figure>
+
+
+Audio Element:
+
+Embedding audio to a web page can be done with <audio>...</audio> tag. The <audio> tag has an attribute 'src' which defines the location of the audio file. It also has an attribute 'controls' which specifies whether to display the player controls.
+<audio src="audio.mp3"  controls="controls"></audio>
+
+ Video Element:
+
+Videos can be embedded into web pages using <video>…</video> tag. The <audio> tag has an attribute 'src' which defines the location of the audio file.  It also has an attribute 'controls' which specifies whether to display the player controls.
+<video src ="myVideo.mp4" controls="controls"></video>
+
+iframe:
+
+The <iframe> element is used to meet the above requirement. Using the iframe element, contents from external sources can be integrated anywhere on our web page.
+It is defined using <iframe>…</iframe> tag.
+<html>  
+    <body>
+        <iframe src="https://owasp.org/"
+        width="1000" height="1000"></iframe>       
+    </body>
+</html>
+
+
+>>Let us now understand why we need to take care of vulnerabilities in HTML5.
+
+We use HTML to create static web pages. HTML5 has introduced some new features which make web pages richer. New features include new semantic elements like 'header', 'footer', etc., new attributes for form elements like date, time, range, etc., new graphic elements like SVG and canvas, and new multimedia elements like audio and video. 
+
+Web developers can use the new features in HTML5 for building hybrid applications that can run on the web and mobile devices. Lots of data flow has to be handled in these applications, therefore developers should take care of the attacks that are possible as well. For example, an attacker can steal the data by inserting some wicked code through HTML forms which will be kept in the database. Security flaws are possible if proper security measures are not taken when using HTML5 features like communication APIs, storage APIs, geolocation, sandboxed frames, offline applications, etc.
+
+Therefore there is a need to find the attacks possible in all-new HTML5 features and their preventive measures to defend against those attacks
+
+>> As web developers, we need to take care of writing preventive measures for all possible vulnerabilities in web pages. As we use HTML for designing web pages, we should be aware of all possible vulnerabilities in this language. Let us now see what are the security risks possible in HTML.
+
+HTML Security 
+As HTML applications are web-based applications, developers should take proper measures to safeguard the stored data and communications. An attacker can inject some malicious code via Bluetooth/wifi/text messages for mobile-based apps or via advertisements/emails for web-based apps. This malicious code can capture sensitive information and can expose it to the attacker or it can run some undesired operations internally like sending false messages or purchasing a product with zero amount etc.
+
+ 
+
+The following is the list of a few vulnerabilities that are possible in HTML:
+
+1. HTML Injection
+
+2. Clickjacking
+
+3. HTML5 attributes and events vulnerabilities
+
+4. Web Storage Vulnerability
+
+5. Reverse Tabnabbing
+
+Let us now understand each vulnerability and its mitigation with examples.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

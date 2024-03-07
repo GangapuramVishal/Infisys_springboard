@@ -1,0 +1,110 @@
+Let us now understand why we need to take care of vulnerabilities in HTML5.
+
+We use HTML to create static web pages. HTML5 has introduced some new features which make web pages richer. New features include new semantic elements like 'header', 'footer', etc., new attributes for form elements like date, time, range, etc., new graphic elements like SVG and canvas, and new multimedia elements like audio and video. 
+
+Web developers can use the new features in HTML5 for building hybrid applications that can run on the web and mobile devices. Lots of data flow has to be handled in these applications, therefore developers should take care of the attacks that are possible as well. For example, an attacker can steal the data by inserting some wicked code through HTML forms which will be kept in the database. Security flaws are possible if proper security measures are not taken when using HTML5 features like communication APIs, storage APIs, geolocation, sandboxed frames, offline applications, etc.
+
+Therefore there is a need to find the attacks possible in all-new HTML5 features and their preventive measures to defend against those attacks.
+
+
+As web developers, we need to take care of writing preventive measures for all possible vulnerabilities in web pages. As we use HTML for designing web pages, we should be aware of all possible vulnerabilities in this language. Let us now see what are the security risks possible in HTML.
+
+HTML Security 
+As HTML applications are web-based applications, developers should take proper measures to safeguard the stored data and communications. An attacker can inject some malicious code via Bluetooth/wifi/text messages for mobile-based apps or via advertisements/emails for web-based apps. This malicious code can capture sensitive information and can expose it to the attacker or it can run some undesired operations internally like sending false messages or purchasing a product with zero amount etc.
+
+ 
+
+The following is the list of a few vulnerabilities that are possible in HTML:
+
+1. HTML Injection
+
+2. Clickjacking
+
+3. HTML5 attributes and events vulnerabilities
+
+4. Web Storage Vulnerability
+
+5. Reverse Tabnabbing
+
+Let us now understand each vulnerability and its mitigation with examples.
+
+Sometimes users will observe some unexpected data getting rendered on a web page. This might be due to a lack of proper validation for input and output on that page. So, a web developer should always check if input and output are properly validated before getting rendered on a page as this can lead to HTML injection attacks.
+
+Let us now understand what is this attack and its consequences.
+
+What is HTML Injection?
+HTML Injection is one of the possible attacks in HTML5 apps. HTML Injection is an attack where an attacker can inject malicious HTML code into a vulnerable web application.  An attacker can send malicious code through HTML input fields or website links. Malicious code can be simple HTML tags that display some information on the page or a form replacing the original page etc., This kind of vulnerability happens when user input is not properly sanitized or the output is not properly encoded.
+
+How HTML Injection is Performed?
+An attacker will first find the vulnerable parts of a web application by inspecting the source code in the browser. Vulnerable parts may be HTML form fields or website links through which an attacker will inject some malicious HTML code. There are many attributes or methods which can render data on an HTML page. If malicious code is injected using innerHTML property and if the data is not properly sanitized, then it will lead to this attack. document.write() method is another way to inject the malicious code. It is used mostly for form input fields like comments box, registration forms, questionnaire forms, etc., These kinds of elements are most vulnerable to HTML Injection attacks.
+
+The main intention of this injection attack is to either change the website's appearance or to steal the user's identity.
+
+Example:
+Following is the malicious HTML code an attacker injects through a website URL:
+
+http://example.com/home.html?username=<img%20src='image1'%20onerror=alert('error')>
+
+Here an attacker is sending an image assigned to the username parameter embedded in a URL.
+
+Following is the vulnerable code which doesn't validate or sanitize the data:
+var position = location.href.indexOf("username=");
+var user = location.href.substring(position+5);
+document.getElementById("div1").innerHTML = "Hello, " + user;
+
+This code is extracting the username position and fetching the value assigned to it. It displays the image injected by an attacker in a div tag and runs some malicious script through it.
+
+Following is an example of using the document.write() method:
+var position = location.href.indexOf("username=");
+var user = location.href.substring(position+5);
+document.write("<h1> Hello, " + user + "</h1>");
+
+Let us now understand the different types of HTML Injections possible.
+Types of HTML Injection
+There are two types of HTML Injections:
+
+1. Stored HTML Injection
+In this injection, the malicious code injected by an attacker will get stored in the backend and will get executed whenever a user makes a call to that functionality.
+
+2. Reflected HTML Injection
+In this injection, the malicious code will not get code stored in the webserver rather will be executed every time the user responds to the malicious code.
+
+ 
+
+How to prevent HTML injection?
+HTML Injection will happen if data is not properly validated. So we need to do proper data validation to prevent this attack. We need to check if data contains any HTML tags and then needs to be removed. This is done differently in different languages or frameworks.
+
+Below are a few mitigation techniques to prevent this attack:
+
+1. Use safe Javascript methods like innerText in place of innerHTML
+
+2. Code Sanitization: Removing illegal characters from input and output refers to HTML code sanitization.
+
+3. Output Encoding: Converting untrusted data into a safe form where data will be rendered to the user instead of getting executed. It converts special characters in input and output to entities form so that they cannot be executed. For example, < will be converted to &lt; etc.,
+
+>> clickjacking
+Let us now understand another attack called clickjacking and its consequences.
+
+Hackers will have several ways to trick the user and make them click on something which they are not supposed to. A common form of this attack involves mirroring a login form on a website. Users will think that they are entering values in the actual HTML form but they are actually entering them in the form fields that are overlaid on that web page. The data which the user enters will be sent directly to an attacker's page. In this type of attack, hackers will usually target sensitive data like passwords, bank account information, credit card information, etc.,
+
+Below are some real-time scenarios of clickjacking attacks:
+
+1. There was an attack on one of the popular browser plugins, where an attacker added a modified page in an iframe and can trick a user into changing settings of the plugin to get access to the local system's resources such as a microphone, camera, etc.
+
+2. A popular social networking site was attacked by tricking users to click on a button that will make them retweet the location of the malicious web page which will be propagated hugely.
+
+Clickjacking is frequently used to hijack accounts for spamming purposes or navigate links to malicious web pages on online social network websites.
+
+What is Clickjacking?
+It is an attack where an attacker uses low iframes with low opaqueness or transparent layers to trick users into clicking on something somewhat diverse from what they actually see on the page. Thus an attacker is hijacking clicks which will execute some malicious code and hence the name 'Clickjacking'. It is also known as UI redressing or iframe overlay.
+
+For example, on a social networking website, a clickjacking attack leads to an unauthorized user spamming the entire network of your friends by sending some false messages.
+
+How clickjacking is performed?
+1. Attackers load a target web page inside a low opacity iframe and on top of that iframe, the attacker's web page will be rendered with a clickable button or link.
+
+2. When a user clicks on that button or link of the rendered web page, it triggers actions on the invisible page. The invisible page might be a malicious web page or a legitimate web page, which the user did not intend to visit.
+
+3. The end user will have no idea that a click has been made on the invisible page and without the user's knowledge actions are performed on the attacker's web page
+
+So, a web developer should also take care of clicks on the web page so that they should not get redirected to some malicious pages. Let us now see how to defend against this attack.

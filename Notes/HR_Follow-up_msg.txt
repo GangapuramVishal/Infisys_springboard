@@ -1,0 +1,36 @@
+Email Template To Reach HR’s:
+
+Hello {name},
+
+My name is {your name} and I am writing to introduce myself and ask for small help. I am currently seeking a new opportunity in {skill} and {skill}. As of right now, I work for {current company} as a {position}, however, I am interested in applying for the open position at your company {position}, link: {link from career portal}. I think I could offer this organization {passionate phrase personalized for this job}.
+
+I am also attaching my resume for your reference.
+
+Lastly, I know your time is valuable and I know this is a big ask coming from a stranger. If it’s too much right now, that’s totally fine! Either way, hope you’re staying safe and healthy.
+
+Sincerely,
+{your name}
+{phone number, email}
+{links to LinkedIn (if not sending over LinkedIn), GitHub, LeetCode, CodeForces, CodeChef}
+
+The subject should be informative and appealing. It can range from:
+“Very interested in working at Meta, kindly refer”
+to:
+“Cold email from a random LinkedIn follower, who wants to be a colleague at Microsoft”
+
+
+
+HR's FOLLOW UP MESSAGE:
+
+subject: Follow-up on [position title] interview
+
+Dear[HR contact's Name],
+I hope this email finds you well. I wanted to follow up regarding my recent interview for the [position title] role at [company name].
+
+I am still very interested in the position and believe my skills and experience align well with the requirements outlined during our conversation. I would be grateful for any updates you can provide regarding the status of my application or any additional steps in the hiring process.
+
+Thank you for the considering my application. I look forward to hearing from you soon.
+sincerely,
+[your Name]
+
+

@@ -1,0 +1,261 @@
+-----------------------------------------------
+AutoMob-Mechanic is a web application for an Automobile service/repair company. The application provides different services to get the car repaired or serviced. The user can book a service on their convenient date and then the company representatives will take care of everything on their own.
+
+Create below-mentioned HTML pages with listed features
+
+home.html: For displaying information about the company.
+
+services.html: For displaying services provided by the company.
+
+preventive-maintenance-service.html: For displaying about the preventive maintenance services.
+
+body-repair-service.html: For the displaying about the body repair services.
+
+car-care-service.html: For displaying about the car care services.
+
+booking.html: For displaying the form to book a particular service.
+
+booking-success.html: For displaying confirmation message on booking.
+
+ 
+Click here to download the images.
+
+-------------------------------------------------------
+Details of the web page(s):
+
+Every page should have a title displayed on the browser tab. Each page has a navigation bar and footer which are separated by a horizontal line. The navigation bar includes below hyperlinks:
+
+AutoMob-Mechanic - Navigates to home.html
+
+Services - Navigates to services.html
+
+Booking - Navigates to booking.html
+
+contact@automob.co.in - Creates a link that opens in the user's email application
+
+The phone number 9999-999-999 should also be displayed in the navigation bar
+ 
+Accomplish the below tasks for all the webpages:
+
+a) All the pages should use the custom font ‘Montserrat’. Click here to download the font file.
+
+Hint: Use @font-face and font-family.
+
+b) All the pages should be made responsive
+
+Hint: Use media queries
+
+ 
+1. home.html
+
+This page renders the information about the company. It has mainly two parts. The first part of the page has a carousel added and the second part has content that explains how AutoMob-Mechanic company works.
+
+Accomplish the following tasks:
+
+a) Style the header as shown below. The links should have a background color added when hovered on them.
+
+
+
+Hint: Use background-color, margin, padding, float, and pseudo-selectors.
+
+b) Add a slideshow of 3 images and static text should be displayed over on it. The 'Explore Services' button will take the user to services.html.
+
+
+
+Hint: Use nth-child selectors, animation, and position
+
+c) Style the content below slideshow as shown below. The ‘Book Service’ button will take the user to booking.html.
+ 
+Hint: Use display and border-radius properties
+
+d) Style the footer as shown below:
+
+Hint: Use position, padding, font-size, text-align, background-color and color properties
+
+
+-------------------------------------------------
+2. services.html:
+
+This page displays the list of services provided by the company. On click of each service card, it will take the user to the appropriate service page.
+
+
+
+ 
+
+Accomplish the following tasks:
+
+a) Style the service page as shown above.
+
+Hint: Use flex, background-image, border, border-radius
+
+ 
+
+b) Add a shadow to the card when the mouse hovers over it. Notice the shadow behind “Preventive Maintenance” in the below screen.
+
+
+
+Hint: Use pseudo-selector and box-shadow property
+----------------------------------------------------
+3. preventive-maintenance-service.html:
+
+This page renders the details about preventive maintenance service. It has a “Book Service” button when clicked, take the user to booking.html.
+
+
+
+ 
+
+Hint: Use flex, box-shadow, margin, and padding properties
+--------------------------------------------------
+4. body-repair-service.html:
+
+This page renders the details about body repair service. It has a “Book Service” button when clicked, take the user to booking.html.
+
+
+
+ 
+
+Hint: Use flex, box-shadow, margin and padding properties
+----------------------------------------------------
+5. car-care-service.html
+
+This page renders the details about car care service. It has a “Book Service” button when clicked, take the user to booking.html.
+
+
+
+ 
+
+Hint: Use flex, box-shadow, margin and padding properties
+-------------------------------------------------------
+6. booking.html:
+
+This page displays a booking form that takes various inputs from the user. The form is submitted to booking-success.html using HTTP method POST when the user clicks on the “Schedule your Appointment” button.
+
+Field Name
+
+Validations
+
+Type
+
+Values
+
+Name
+
+Required, Name should have the first name and last name separated with space and should have only alphabets
+
+text
+
+ 
+
+Email Id
+
+Required. Email Id should follow a pattern like xyz@abc.com
+
+email
+
+ 
+
+Code
+
+ 
+
+dropdown
+
+code (selected and disabled), +213, +91, +244, +61
+
+Phone Number
+
+Required. Phone number should have 10 digits
+
+tel
+
+ 
+
+Select Service
+
+Required
+
+dropdown
+
+Preventive Maintenance Service, Body Repair Service, Car Care Service
+
+Car Make
+
+Required
+
+datalist
+
+Mahindra, Honda, Hyundai, Ford, Toyota, Nissan etc
+
+Car Model
+
+Required
+
+text
+
+ 
+
+Fuel Type
+
+Required
+
+radiobutton
+
+ 
+
+Kilometers Ran
+
+Required
+
+number
+
+ 
+
+ 
+
+
+ 
+
+ 
+Hint: Use flex, margin, border-radius properties.
+--------------------------------------------------
+
+7. booking-success.html
+
+This page will display a confirmation message once the booking is done.
+
+
+
+ 
+
+Hint: Use flex, margin, and line-height properties
+
+------------------------------------------------------
+Refer to the below rubric for getting the project evaluated by your SMEs from the project or account.
+
+Concepts
+
+Marks
+
+Content Layouts
+
+10
+
+Custom Fonts 
+
+5
+
+Animations
+
+10
+
+Pseudo selectors
+
+5
+
+Responsiveness
+
+20
+
+
+
+ 

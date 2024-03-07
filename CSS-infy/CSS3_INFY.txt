@@ -1,0 +1,737 @@
+CSS3 is the newer version of CSS used for styling web pages more effectively. CSS3 has introduced a lot of enhanced features. CSS3 is divided into modules which makes styling of the web pages simpler and easier. 
+
+Developers choose CSS3 to style web pages without using any additional tools. It helps in creating attractive web pages and makes the web layout very simple. CSS3 can help in creating dynamic web pages without using JavaScript. It also helps in creating responsive web pages.
+
+>> CSS3 is the latest version of CSS. CSS3 provides new styling elements using which we can style webpages without any additional tools.
+
+Unlike the previous versions, CSS3 is divided into Modules. It contains the "old CSS specification" which has been split into smaller pieces. In addition, new modules like border, shadow, color, transition, animation, and many more have been added.
+
+>> CSS is a style sheet markup language. CSS styles are written as a property value pair.
+
+Syntax:
+
+   property: value   
+
+Example:
+
+  color: green;
+
+The style rules are applied to the HTML elements using selectors.
+
+>> Let us learn where do we include CSS style rules
+
+There are different ways of specifying style rules
+
+Inline styling
+
+Internal styling
+
+External styling
+
+Importing style sheet
+
+Let us learn ways of specifying style rules.
+
+>> There are different types of selectors available in CSS.
+Element Selectors:
+Element selectors are used for styling elements 
+
+Id Selector: Id selectors are used for styling an element specifically
+
+Class Selectors:
+Class selectors are used for providing the same styling for multiple elements.
+
+Contextual Selectors:
+
+Contextual selectors are used when we want selectors to match elements that appear in a context.
+
+Context is referred to as a parent/child relationship between HTML elements.
+
+We separate the parent and child elements using space while writing the style rules using contextual selectors.
+
+Grouping of selectors
+
+When we have the same styling for multiple elements we can group the elements and style together.
+
+Grouping of selectors helps in reducing the repetitive styling statements.
+
+The multiple HTML elements that we group to provide a common styling should be separated using a comma.
+
+The child elements can inherit the style properties from the parent element, but some of the stylings cannot be inherited by child elements automatically.
+
+Some of the CSS style properties have “inherit” value associated with them. For example, Font and Text properties are inherited but the border and margin properties are not inherited.
+
+If the “inherit” value is associated with the property then styling is also inherited. Otherwise, styling is not inherited.
+
+If we want the styling which is not inherited by default to be inherited then we have to specify inherit to the style attribute explicitly.
+
+Example:
+
+border: inherit
+
+>> Pseudo-classes
+
+We can apply pseudo-classes to link as shown below
+a:hover {
+  background-color: black;
+  color: white;
+}
+a::visited {
+  color: purple;
+}
+
+We can apply pseudo-classes to input elements as shown below
+input[type="text"]:enabled {
+  background-color: lightblue;
+}
+input[type="text"]:required {
+  background-color: red;
+}
+
+We can apply the :first-letter pseudo-class as shown below
+
+p::first-letter {
+  color: #8a2be2;
+  font-size: 200%;
+}
+
+>> In CSS3 new selectors have been introduced for efficient selection of HTML elements.
+
+These selectors have been categorized into the following.
+
+Relational Selectors
+
+Attribute Selectors
+
+
+
+Consider a scenario where we want to style only the direct child element of a parent ignoring the nested child elements or if we have a requirement where we want to style the sibling of an element 
+
+In these scenarios, we can use relational selectors.
+
+Let us explore relational selector
+
+
+>>Child
+        --  Selects any element B that is a direct child of A(ignores the deeper nested elements) --   section > p  
+   A>B
+
+ 
+>>Adjacent Sibling  --- Selects the B element that is placed immediately after the A element and shares the same parent.   --- h1 + p
+			This selects only the immediate sibling.
+    A+B
+
+>> General Sibling  ----  Selects all the B elements that are placed after the A element and share the same parent.     -----  div ~ p
+
+			This selects all the siblings.
+    A ~ B
+
+>>>
+If we have a requirement to style an element based on the attribute of the element or based on the value of the attribute of the element.
+
+In this scenario, we can use attribute selectors.
+
+Now let us discuss how to work with attribute selectors.
+
+a [attribute]
+Selects all A elements with the specified attribute.
+
+a[attribute=value]
+Selects all A elements with specified attribute and value.
+
+a[attribute^=value]
+Selects all A elements where the value of attribute starts with the specified value.
+
+a[attribute$=value]
+Selects all A elements where the value of attribute ends with the specified value.
+
+a[attribute*=value]
+Selects all A elements where the value of the attribute contains the specified value.
+
+>>Typography refers to the technique of presenting the text of a website in a legitimate, readable, and appealing way 
+
+Elements of good typography included
+
+Color: Background and text-color
+
+Spacing: letter-spacing,line-height
+
+Font: font-style and font-size
+
+Alignment:  text-align
+
+
+>> The font property is a shorthand for font-style, font-variant, font-weight, font-stretch, font-size, line-height, and font-family
+
+font-family: Specifies the font-family. Values can be web-safe fonts.
+font-family: "comic sans ms", Arial;
+
+font-style: Specifies the style of the font. Values can be normal (default), italic, oblique
+font-style: italic;
+
+font-variant: Specifies the variant of the font. Values can be normal (default) and small-caps
+font-variant: small-caps;
+
+font-size: Specifies the size of the font. Values can be x-small, small, medium, large, and can be a specific number with pixels unit.
+font-size: x-small;
+font-size: 20px;
+
+font-weight: Specifies the weight of the font. Values can be normal, bold, bolder, light, x-large.
+font-weight: bold;
+
+line-height: Specifies the height of the line
+line-height: 10px;
+line-height: 1cm;
+line-height: 0.5;
+
+examples--------------
+<!DOCTYPE html>
+<html> 
+<head> 
+    <meta charset="UTF-8"> 
+    <title>Font properties</title> 
+    <link rel="stylesheet" type="text/css" href="css/font.css"> 
+</head> 
+<body> 
+    <h1 class="fontfamily">Business</h1> 
+    <p class="fontvariant">Most of the organizations adopt a sustainable approach to business. Organization's are aware that growth is directly proportional to the well being of employees and business partners, local communities and the environment.</p> 
+    <h2 class="fontweight customFont">Technology</h2> 
+    <p class="lineHeight">Technology plays vital role on business operations. Technology helps in automating lot of processes that helps in increasing  productivity</p> 
+    <footer class="fontstyle">Copyright &copy; Copyright. All rights reserved.</footer> 
+</body> 
+</html> 
+-------------------CSS
+.fontfamily {
+  font-family: "comic sans ms", Arial;
+}
+.customFont {
+  font-family: navBrandFont;
+}
+.fontstyle {
+  font-style: italic;
+}
+.fontvariant {
+  font-variant: small-caps;
+}
+.fontweight {
+  font-weight: bold;
+}
+.lineHeight {
+  line-height: 40px;
+}
+@font-face {
+  font-family: navBrandFont;
+  src: url(blackjack.otf);
+}
+
+-----------------------------------------------
+
+>> We may want to present our text in a more appealing way like spacing, capitalizing, indenting and underlining, etc
+
+CSS provides the following text properties.
+
+text-align: Specifies the horizontal alignment of the text
+text-align: right;
+
+text-decoration: Specifies whether the text should be underlined or overlined. Values can be none (default), underline, overline, line-through
+text-decoration: underline;
+
+text-transform: Specifies whether the text should be rendered in uppercase, lowercase, or camelcase. Values can be capitalized, uppercase, lowercase.
+text-transform: capitalize;
+
+letter-spacing: 90px;
+word-spacing: Specifies the spacing between the words
+
+word-spacing: 90px;
+text-indent: Specifies the indentation of the text. Values can be left, right, center and justify
+text-indent: 90px;
+
+
+>>The CSS box model is a container, which wraps around every HTML element. It consists of margins, borders, padding along with the actual content.
+
+
+
+The space from the content to the border is padding. The green box around the element is the border and the thickness of the border is the width of the border. The spacing from the HTML element to the neighboring elements is the margin. The width and height of an element include padding, border, and margin.
+
+>> Border
+<body>
+<h3>Box model</h3>
+<div>
+<p>This text is the content of the box.</p>
+<p>This text is the content of the box.</p>
+<p>This text is the content of the box.</p>
+</div>
+</body>
+div {
+  border: 2px solid lightgrey;
+}
+The first argument 2px specifies the width of the border. The second value solid specifies the border-style and the third argument specifies the color of the border
+
+The order of the values specified to the border property can be changed.
+
+The second argument border-style can take different values. We can provide solid, dotted, dashed, etc as values.
+
+The border-style property can be specified as border-style-left, border-style-right, border-style-top, border-style-bottom.
+The border is the shorthand property. We can specify the border-left, border-right, border-top and border-bottom specifically.
+>>
+Border- radius
+
+Border property adds a sharp border to our HTML element.
+
+If we need rounded corners for our border, we can achieve the requirement using the border-radius property of CSS3.
+
+The border-radius is a shorthand property. Border radius value can be expressed using px or %. Percentage(%) is used when we want border-radius to be directly correlated with elements width.
+
+border-radius is a combination of below four properties. 
+
+border-top-left: can be used to provide top left radius
+
+border-top-right: can be used to provide top right radius
+
+border-bottom-left: can be used to provide bottom left radius
+
+border-bottom-right: can be used to provide bottom right radius
+border: lightgrey dashed 3px;
+border-radius: 30px 15px 25px 50px;
+
+>>
+Width and Height
+<body>
+<h3>Box model</h3>
+<div>
+<p>This text is the content of the box.</p>
+<p>This text is the content of the box.</p>
+<p>This text is the content of the box.</p>
+</div>
+</body>
+
+div {
+  border: lightgrey dashed 3px;
+  width: 220px;
+  height: 125px;
+}
+>> Border property adds a sharp border to our HTML element.
+
+If we need rounded corners for our border, we can achieve the requirement using the border-radius property of CSS3.
+
+We can use slashes(“/”) between 2 values to specify elliptical corners.
+
+Ex : border-radius: 10px/20px; /* horizontal radius/vertical radius */
+
+Border radius is short-hand property. Border radius value can be expressed using px or %. Percentage(%) is used when we want border-radius to be directly correlated with elements width.
+
+border-radius is combinations of the below four properties. 
+
+border-top-left: can be used to provide top left radius
+
+border-top-right: can be used to provide top right radius
+
+border-bottom-right: can be used to provide bottom right radius
+
+border-bottom-left: can be used to provide bottom left radius
+
+In border-radius CSS property:
+
+if only one value is set, this radius applies to all 4 corners.
+
+If two values are set, the first value applies to top-left and bottom-right corner, the second value applies to top-right and bottom-left corner.
+
+If all values are set, they apply to the top-left, top-right, bottom-right, bottom-left corner in that particular order.
+
+Note: Perfect Border can be applied to HTML Element using border-radius property.
+
+div{
+width:200px;
+height:200px;
+border: 1px solid hotpink;
+background-color:RGBA(255,192,203,0.45);
+border-radius:30px 15px 25px 50px;
+}
+
+>>
+Padding
+border: lightgrey dashed 3px;
+padding: 20px;
+Padding is the shorthand property for padding-top, padding-right, padding-bottom and padding-left
+
+We can provide top, right, bottom and left padding specifically also
+
+CSS has many shorthand properties. The shorthand properties in CSS can take from 1 to 4 values. The order of these values are top, right, bottom and left
+
+If 1 value is specified then the same value is considered for all other 3 values.
+
+If 2 values are specified then the first value is considered as top and bottom values and the second value is considered as left and right values.
+
+If 3 values are specified then the first value is considered as the top value and the second value is considered as left and right values and the third value is considered as bottom value.
+
+>>
+Margin
+
+Margin is also a shorthand property like padding.
+
+We can provide margin-top, margin-right, margin-bottom,margin-left values.
+div {
+  border: lightgrey dashed 3px;
+  padding: 20px;
+  margin: 60px;
+  width: 220px;
+  height: 125px;
+}
+
+>>
+Total Width and Height of an HTML element
+
+When we specify the width and height property for any HTML element using CSS, we are actually setting the width and height of the content not the width and height of the complete element.
+
+The complete width and height of an element include the padding, border
+
+Total element width = width + left padding + right padding + left border + right border
+
+Total element height = height + top padding + bottom padding + top border + bottom border.
+
+>>Text Shadow
+
+The text-shadow property adds a shadow to the text of any HTML element
+
+text-shadow: 10px 6px 2px black;
+The first value specifies the horizontal offset. Positive value creates a shadow to the right. Negative value creates the shadow to the left.
+
+The second value specifies the vertical offset. Positive value creates a shadow to the left. Negative value creates the shadow to the right.
+
+The third value specifies the blur distance. An optional value that decides the percentage of blur effect and takes a positive value.
+
+The fourth value specifies the shadow color. 
+
+>>
+You might have observed an HTML element getting transformed such as the element gets rotated or scaled upon hover of the mouse.
+
+These transformations were generally achieved through JavaScript or JavaScript frameworks.
+
+CSS3 has introduced the transformations using which we can transform our HTML elements using the transform property of CSS3.
+
+Transformations are applied to create dynamic web pages.
+CSS3 enables us to move, tilt, scale any element of our web page with ease with the concept of transforms.
+
+We can rotate and pop out a particular image in an image gallery on the hover of the mouse.
+
+CSS3 supports the following transformations
+
+Translate
+
+Scale
+
+Rotate
+
+Skew
+
+Let us explore CSS3 transformations.
+
+CSS3 translate() function is used to move an element from one position to another position.
+
+An element can be moved to the right, left, top, bottom.
+
+Syntax: translate (x,y) -> moves the element to right by x-value, and y-value down from its current position.
+
+An element can be moved in only one direction i.e. horizontal/vertical using translateX and translateY functions.
+
+Example:
+transform:translate(45px,70px);
+
+translate(20px, 30px) -> moves the element to right by 20px and 30px down from the current position.
+
+translate(-40px, 20px) -> moves the element to left by 40px and 20px down from the current position.
+
+translate(-30px, -25px) -> moves the element to left by 30px and 25px up from the current position.
+
+>>
+CSS3 scale() function is used to change(increase/decrease) the size of any element.
+
+Syntax: scale(x,y) -> scales the element width(x-value) & height(y value)
+
+If only one value is supplied to the scale(value) function, then that value will be considered as both x & y parameters
+
+Example:
+transform:scale(1.5,1.5);
+
+scale(2,1) -> The width of the element will be doubled and height remains the same.
+
+scale(0.5) -> will decrease the element size by half
+
+scale(1)-> element size will remain same
+
+scale(2)-> doubles the element size
+
+>>
+CSS3 rotate() function is used to rotate an element from its origin point up to a specified angle. The angle is specified in degrees.
+
+Syntax: rotate(x) -> Rotates the element. 
+
+If the angle specified is a positive value then the element rotates clockwise. if the angle specified is a negative value then the element rotates anti-clockwise. 
+
+Example:
+transform:rotate(45deg);
+
+rotate(20deg) -> Rotates the element by 20 degrees in clockwise direction.
+
+rotate(-50deg) -> Rotates the element by 50 degrees in anti-clockwise direction.
+
+>>
+CSS3 skew() function is used to turn/skew any element to any angle.
+
+The turning/skewing is dependent on the parameters specified for the vertical & horizontal axis.
+
+Syntax: skew(x,y) -> skews the element from x degrees from the x-axis & y- degrees from the y-axis.
+
+if the y-axis value is not specified then it has a zero value.
+
+To skew an element across a single axis, we can use skewX() and skewY() functions.
+
+Example:
+transform:skew(30deg,20deg);
+
+skew(20deg) -> skew an element by 20 degrees across x-axis.
+
+skew(30deg, 10deg) -> skews an element by 30 degrees across x-axis and 10 degrees across y-axis.
+
+skewX(15deg) -> skews an element by 15 degrees across x-axis.
+
+skewY(45deg) -> skews an element by 45 degrees across y-axis.
+
+>>
+If we have a requirement to show the gradual changes in the CSS properties of an element during an interval of time.
+
+For example, you might want to show an element changing its size in an interval of 2 seconds upon hover of the mouse. We can use the CSS3 transition property.
+
+Transitions are gradual changes in the properties of an element when it changes from one style to another.
+
+Using CSS3 transition effects can be added to elements without the need for any scripting or additional software like Flash.
+
+To add a transition, two things must be specified:
+
+The CSS property to which the effect should be added.
+
+The duration of the effect.
+
+transition: height 3s;
+Here in the above syntax,
+
+height is the CSS property to be transited
+
+3s is the duration for the animation
+
+Transition is a short-hand property to specify the properties mentioned below
+
+transition
+
+Description
+
+transition-property
+
+Includes CSS3 properties that need to be transited over a period of time
+
+For example height, width, background, color, etc
+
+It accepts a comma-separated list of properties to be transited.
+
+It accepts the “all” keyword as a value that specifies that all the properties need to be transited.
+
+transition-duration
+
+Sets the duration (sec/msec) of transition. If this duration is not mentioned then the transition will not have any effect.
+
+transition-timing-function
+
+Controls the pace/speed of the transition. The key terms used are linear, ease, ease-in, ease-out, ease-in-out, steps.
+
+transition-delay
+
+Specifies the delay before starting the transition.
+
+The transition timing function is used to specify the pace/speed of transition.
+
+This can be done in 2 ways.
+
+Specifying the pre-defined functions.
+
+transition-timing-function
+
+Description
+
+ease
+
+Transition speed will be slow at the start and end and fast pace in between.
+
+linear
+
+Transition speed will be the same throughout.
+
+ease-in
+
+Transition speed will be slow at the start.
+
+ease-out
+
+Transition speed will be slow at the end.
+
+ease-in-out
+
+Transition with slow speed at the start and end and linear speed in between
+
+steps
+
+Allows specifying intervals for the timing function.
+
+Defining a custom function by specifying four co-ordinates to define a cubic bezier curve.
+
+The Cubic Bezier curve is defined by 4 points P0, P1, P2, and P3.
+
+P0 and P3 are the start and end of the curve hence they have values 0 and 1 by default. We specify the x and y coordinate values for P1 and P2 to the cubic bezier curve function.
+
+cubic-bezier(x1,y1,x2,y2)
+In the above syntax,
+x1,y1,x2, and y2 are the x and y-coordinates of points P1 and P2.
+transition-timing-function: ease, linear;
+cubic-bezier(0,1.1,0.8,4)
+ 
+In the above example,
+
+Multiple transition functions can be specified for multiple properties by separating them with a comma.
+
+>>
+Transition property can give a dynamic effect on web pages.
+
+But there are a few disadvantages with transitions.
+
+Transition starts only when some event like hover, focus occurs.
+
+We can specify only the initial state and final state for transitions, but we cannot specify an intermediate state.
+
+To overcome these disadvantages we use animations of CSS3.
+
+CSS3 Animations can be used to replace animated images, scripts, and flash animations on most of the web pages.
+
+Animations are the same as transitions, but we can specify intermediate states also and animations can start without events
+
+Animation in CSS3 is done using keyframes. Within each keyframe, we define the start and end of a smooth transition.
+
+We can specify when the change will happen using from & to keywords.
+
+@keyframes anim
+{
+     to {color: white;background:black;}
+     from {color: black;background:white;}
+}
+Also, we can specify when the change will happen by specifying values in percentages: 0% is the beginning, 100% is when the animation is complete.
+
+@keyframes anim
+{
+     0% {color: white;background:black;}
+     100% {color: black;background:white;}
+}
+Best Practice:
+
+Do not have more than one animation to happen at the same time. Schedule the animations so that they will not get messed up in the page view.
+
+>>A Responsive page is a web page that renders well in all the devices like desktop, laptop, tablet, and mobiles, which have different screen sizes.
+
+A responsive page will adapt to the screen size and will look good on every device.
+
+These pages adjust to the screen resolution or simply the screen size and orientation (in case of mobile and tablet) of the device being used to view the web page.
+
+We can make a web page's layout change according to the screen size using the below techniques
+
+Fluid Layouts
+
+Flexible Images
+
+Media Queries 
+
+Flexible Images 
+
+The image grows or shrinks according to the container dimensions. We need to specify the width of the image using the percentage of its container width.
+
+Setting the width of foreground images
+
+We will apply relative dimensions to the <img> element
+
+Problem: Consider we have an image that needs to be displayed at 150X150 size inside a 720 px wide element and we want it to scale it as the parent element scales.
+
+Solution: For the above problem, we can have a container exclusively for the image, set its relative size on the container, and let the image fill container width.
+
+i.e., 150/720 = 20.8333%
+
+and to scale the image when the parent scales but limit the extent to which it scales up/down we can set max-width/min-width on the parent. 
+
+Setting the width of the background images
+
+Problem: Consider we want the background image to scale when the element for which background is set to scales.
+
+Solution: For the above problem, we can set background-size: 100%
+
+Fluid Layouts
+
+Layout grows and shrinks according to the viewport dimensions. We need to use relative units such as % instead of absolute units (px).
+
+In order to fit the layout to viewport width, we will replace absolute units for dimensions of elements(px) with relative units (%)
+
+The width of the topmost element (<html>) is browser width (due to viewport tag)
+
+Thus specifying the width of all elements using % will scale the layout to the viewport width. Such a layout is called fluid layout 
+
+We need to represent all px widths as % of the corresponding parent width.
+
+Media queries
+
+Media queries apply CSS styling based on the device form factors. Hence the layout can differ on a desktop, tablet, and mobile
+
+@media screen and (max-width: 520px) {
+  .body {
+    background: none;
+  }
+}
+
+Line 1: This media query hides a background image for the element with the class body when the page is viewed on a screen and browser viewport width is lesser than 520px, 
+
+@media starts a media query 
+
+screen: CSS to be applied only to screen media type
+
+max-width: Apply CSS if the screen size is 520px wide, or less
+
+>>
+
+Best Practices:
+
+Logically divide the web content of the webpage and apply styles. 
+
+Create common styles in your style sheet and we can following this order of sequence:  
+
+header    
+
+footer 
+
+body
+
+p, div
+
+h1,h2,h3
+
+hyperlinks
+
+nav
+
+ordered lists and unordered lists
+
+table
+
+Instead of using one large style sheet for an application, it is advised to logically split the style sheets into multiple smaller ones for an application.
+
+Add a space after each comma, except within color functions.
+
+Its preferred to ignore units on 0 values. For example use “margin-left: 0”  instead of “margin-left:0px”
+
+It is best practice to use the expanded syntax instead of shorthand. For example use “background-color:’red’” instead of background:’red’
+
+To follow consistency, the class names should be in lowercase with the words separated by _. For example “class_one” is a valid CSS class name.
+
+It is preferred to use inline-start or inline-end property rather than left/ right property with margins, padding, and borders. For example use margin-inline-start: 2px instead of margin-let:3px.

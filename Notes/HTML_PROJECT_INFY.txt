@@ -1,0 +1,112 @@
+AutoMob-Mechanic is a web application for an Automobile service/repair company. The application provides different services to get the car repaired or serviced. The user can book a service on their convenient date and then the company representatives will take care of attending to the service request. 
+Create the below-mentioned HTML pages with listed features:
+
+ home.html: For displaying information about the company.
+
+ services.html: For displaying services provided by the company.
+
+ preventive-maintenance-service.html: For displaying about the preventive maintenance services.
+
+ body-repair-service.html: For the displaying about the body repair services.
+
+ car-care-service.html: For displaying car care services.
+
+ booking.html: For displaying the form to book a particular service.
+
+ appointment.html: For displaying the form to schedule an appointment.
+
+ booking-success.html: For displaying the confirmation message on booking.
+
+>> Details of the web page(s):
+Every page should have a title displayed on the browser tab. Each page has a navigation bar and footer which are separated by a horizontal line. The navigation bar includes below hyperlinks:
+
+AutoMob-Mechanic - Navigates to home.html
+
+Home - Navigates to home.html
+
+Services - Navigates to services.html
+
+Booking - Navigates to booking.html
+
+contact@automob.co.in - Creates a link that opens in the user's email application
+
+1. home.html
+This page renders information about the company. 
+
+Feature(s) to be implemented:
+Use appropriate sectioning element(s) to give meaning to the content
+
+The 'Explore More' button should take the user to services.html.
+Screenshot:
+
+
+>> 2. services.html:
+This page displays the list of services provided by the company. 
+
+Feature(s) to be implemented:
+Use appropriate element(s) to display a table containing details of the services offered.
+
+The 'More Details' button should take the user to the appropriate service page.
+Screenshot:
+
+>> 3. preventive-maintenance-service.html:
+This page renders the details about preventive maintenance services. 
+
+Feature(s) to be implemented:
+Use the appropriate element(s) to display the service aims.
+
+The 'Book Service' button should take the user to the booking.html.
+Screenshot:
+
+>> 4. body-repair-service.html:
+This page renders the details about body repair services. 
+
+Feature(s) to be implemented:
+Use the appropriate element(s) to display the service aims.
+
+The 'Book Service' button should take the user to the booking.html.
+Screenshot:
+
+>> 5. car-care-service.html
+
+This page renders the details about car care services. 
+
+Feature(s) to be implemented:
+
+Use the appropriate element(s) to display the service aims.
+
+The 'Book Service' button should take the user to the booking.html.
+Screenshot:
+
+>> 6. booking.html:
+This page displays a booking form that takes various inputs from the user.
+
+Feature(s) to be implemented:
+Use the appropriate element(s) to create a form.
+
+Implement the validations for the form fields.
+
+The 'Schedule an Appointment' button should submit the form to appointment.html using the HTTP method POST.
+
+The form doesn't have an autocomplete feature enabled.
+
+Screenshot:
+
+>> 7. appointment.html
+This page displays an appointment form that takes various inputs from the user. 
+
+Feature(s) to be implemented:
+Use the appropriate element(s) to create a form.
+
+Implement the validations for the form fields.
+
+The 'Book' button should submit the form to booking-success.html using the HTTP method POST.
+
+The form doesn't have an autocomplete feature enabled.
+
+Screenshot:
+
+>> 8. booking-success.html
+This page will display a confirmation message once the booking is done.
+
+Screenshot:
